@@ -21,5 +21,5 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_KEY }}
         script: |
-          cd node-app
+          export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
           kubectl apply -f deployment.yaml
